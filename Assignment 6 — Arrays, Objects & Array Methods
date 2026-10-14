@@ -1,0 +1,45 @@
+Assignment 6: Arrays, Objects, and Core Methods
+
+const products = [
+    { name: "Laptop", price: 800 },
+    { name: "Mouse", price: 25 },
+    { name: "Keyboard", price: 45 }
+];
+
+console.log("-- All Products (forEach) --");
+
+products.forEach(product => {
+    console.log(`Item: ${product.name} - Price: $${product.price}`);
+});
+
+const affordable = products.filter(product => product.price < 50);
+
+console.log("-- Filtered Products (Price < $50) --");
+console.log(affordable);
+
+const tags = products.map(product =>
+    `${product.name.toUpperCase()} costs $${product.price}`
+);
+
+console.log("-- Mapped Product Tags (map) --");
+console.log(tags);
+
+Expected Output:
+
+-- All Products (forEach) --
+Item: Laptop - Price: $800
+Item: Mouse - Price: $25
+Item: Keyboard - Price: $45
+
+-- Filtered Products (Price < $50) --
+[
+  { name: 'Mouse', price: 25 },
+  { name: 'Keyboard', price: 45 }
+]
+
+-- Mapped Product Tags (map) --
+[
+  'LAPTOP costs $800',
+  'MOUSE costs $25',
+  'KEYBOARD costs $45'
+]
