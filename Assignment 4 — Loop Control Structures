@@ -1,0 +1,48 @@
+Assignment 4: Loop Control Structures
+
+console.log("-- Multiplication Table of 5 --");
+
+for (let i = 1; i <= 5; i++) {
+    console.log(`5 x ${i} = ${5 * i}`);
+}
+
+console.log("-- First number > 10 divisible by 6 --");
+
+let num = 11;
+
+while (true) {
+    if (num > 10 && num % 6 === 0) {
+        console.log("Found:", num);
+        break;
+    }
+    num++;
+}
+
+let n = 0;
+
+do {
+    n++;
+
+    if (n === 3) {
+        continue;
+    }
+
+    console.log(n);
+} while (n < 5);
+
+Expected Output:
+
+-- Multiplication Table of 5 --
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+
+-- First number > 10 divisible by 6 --
+Found: 12
+
+2
+4
+5
+```
