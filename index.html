@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Inventory Dashboard</h1>
+        <p>Manage products and analyze your inventory</p>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Inventory Value</h3>
+                <p id="totalValue">$0</p>
+            </div>
+
+            <div class="card">
+                <h3>Affordable Products</h3>
+                <p id="affordableCount">0</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add New Product</h2>
+
+            <form id="productForm">
+                <input id="productName"
+                       type="text"
+                       placeholder="Enter product name"
+                       required>
+
+                <input id="productPrice"
+                       type="number"
+                       placeholder="Enter price"
+                       min="0.01"
+                       step="0.01"
+                       required>
+
+                <button type="submit">Add Product</button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Product Inventory</h2>
+
+            <label for="priceFilter">Filter products:</label>
+            <select id="priceFilter">
+                <option value="all">All Products</option>
+                <option value="affordable">Under $200</option>
+                <option value="premium">Premium ($200+)</option>
+            </select>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Formatted Inventory Report</h2>
+            <ul id="reportList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>JavaScript Internship Capstone Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
