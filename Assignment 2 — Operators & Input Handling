@@ -1,0 +1,22 @@
+Assignment 2: Operators, Expressions, and Input Handling
+
+let subtotal = Number(prompt("Enter bill amount:"));
+let tipPercentage = Number(prompt("Enter tip percentage:"));
+
+let tip = subtotal * tipPercentage / 100;
+let total = subtotal;
+total += tip;
+
+console.log("Subtotal: $" + subtotal);
+console.log("Tip Percentage: " + tipPercentage + "%");
+console.log("Calculated Tip: $" + tip);
+console.log("Total Amount to Pay: $" + total);
+
+Sample Input: Bill = 100, Tip = 15
+
+Expected Output:
+
+Subtotal: $100
+Tip Percentage: 15%
+Calculated Tip: $15
+Total Amount to Pay: $115
